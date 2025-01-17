@@ -7,9 +7,18 @@ let lamp = document.getElementById("lamp");
 let btn = document.getElementById("toggleLamp");
 let background = document.getElementById("lighting");
 
+lamp.innerHTML = "<img src='../img/yellow_lamp.png' alt='lampadina accesa'>";
 background.style.backgroundColor = "#000000";
 
 btn.addEventListener("click", () => {
-    lamp.innerHTML = "<img src='../img/yellow_lamp.png' alt='lampadina accesa'>";
-    background.style.backgroundColor = "#FFEFD5";
+
+    if (btn.innerHTML == "Accendi") {
+        lamp.innerHTML = "<img src='../img/yellow_lamp.png' alt='lampadina accesa'>";
+        background.style.backgroundColor = "#FFEFD5";
+        btn.innerHTML = "Spegni";
+    } else if (btn.innerHTML == "Spegni") {
+        lamp.innerHTML = "<img src='../img/white_lamp.png' alt='lampadina spenta'>";
+        background.style.backgroundColor = "#000000";
+        btn.innerHTML = "Accendi";
+    }
 })

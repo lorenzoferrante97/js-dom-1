@@ -5,7 +5,11 @@
 
 let lamp = document.getElementById("lamp");
 let btn = document.getElementById("toggleLamp");
+let background = document.getElementById("lighting");
+
+background.style.backgroundColor = "#000000";
 
 btn.addEventListener("click", () => {
     lamp.innerHTML = "<img src='img/yellow_lamp.png' alt='lampadina accesa'>";
+    background.style.backgroundColor = "#FFEFD5";
 })

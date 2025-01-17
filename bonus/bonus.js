@@ -3,21 +3,26 @@
 // 2. creo evento click con operazioni all'attivazioen dell'evento
 //      - cambio immagine
 
-let lamp = document.getElementById("lamp");
+let lampOff = document.getElementById("lampOff");
+let lampOn = document.getElementById("lampOn");
 let btn = document.getElementById("toggleLamp");
 let background = document.getElementById("lighting");
 
-lamp.innerHTML = "<img src='../img/yellow_lamp.png' alt='lampadina accesa'>";
+lampOn.style.display = "none";
+
+// lamp.innerHTML = "<img src='../img/white_lamp.png' alt='lampadina spenta'>";
 background.style.backgroundColor = "#000000";
 
 btn.addEventListener("click", () => {
 
     if (btn.innerHTML == "Accendi") {
-        lamp.innerHTML = "<img src='../img/yellow_lamp.png' alt='lampadina accesa'>";
+        lampOn.style.display = "block";
+        lampOff.style.display = "none";
         background.style.backgroundColor = "#FFEFD5";
         btn.innerHTML = "Spegni";
     } else if (btn.innerHTML == "Spegni") {
-        lamp.innerHTML = "<img src='../img/white_lamp.png' alt='lampadina spenta'>";
+        lampOn.style.display = "none";
+        lampOff.style.display = "block";
         background.style.backgroundColor = "#000000";
         btn.innerHTML = "Accendi";
     }

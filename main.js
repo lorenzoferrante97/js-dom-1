@@ -7,5 +7,5 @@ let lamp = document.getElementById("lamp");
 let btn = document.getElementById("toggleLamp");
 
 btn.addEventListener("click", () => {
-    
+    lamp.innerHTML = "<img src='img/yellow_lamp.png' alt='lampadina accesa' id='lamp'>";
 })

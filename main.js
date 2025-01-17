@@ -5,3 +5,7 @@
 
 let lamp = document.getElementById("lamp");
 let btn = document.getElementById("toggleLamp");
+
+btn.addEventListener("click", () => {
+    
+})
